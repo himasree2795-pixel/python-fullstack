@@ -10,7 +10,7 @@ print("temperature:",current["temp_C"],"C")
 print("humidity:",current["humidity"],"%")
 print("wind speed:",current["windspeedKmph"],"km/h")
 print("weather:",current["weatherDesc"][0]["value"])
-print("----------------Hourly Forecast------------------")
+print("\n----------------Hourly Forecast------------------")
 hourly = data["weather"][0]["hourly"]
 for hour in hourly:
     print(
