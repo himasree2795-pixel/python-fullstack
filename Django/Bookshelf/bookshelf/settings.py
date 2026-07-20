@@ -86,8 +86,8 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = 'accounts.CoustmUser'
-STATICFILES_DIRS = [BASE_DIR/'STASTIC']
+AUTH_USER_MODEL = 'accounts.CustomUser'
+STATICFILES_DIRS = [BASE_DIR / 'static']
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 

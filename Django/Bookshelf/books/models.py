@@ -2,7 +2,7 @@ from django.db import models
 from django.conf import settings
 
 # Create your models here.
-class Books(models.Model):
+class Book(models.Model):
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=200)
     cover = models.ImageField(upload_to='covers/', blank=True)
@@ -20,9 +20,9 @@ class Books(models.Model):
 
 class Review(models.Model):
     book = models.ForeignKey(
-        Books,
-        on_delete=models.CASCADE,
-        related_name='reviews'
+    Book,
+    on_delete=models.CASCADE,
+    related_name='reviews'
     )
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
